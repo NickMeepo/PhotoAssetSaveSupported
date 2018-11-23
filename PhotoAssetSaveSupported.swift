@@ -10,7 +10,7 @@
 import UIKit
 
 @objc public protocol PhotoAssetSaveSupported: AnyObject {
-    @objc func photoAssetSaved(image: UIImage?, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer?)
+    @objc func photoAssetSaved(image: UIImage?, didFinishSavingWithError error: NSError?, contextInfo: UnsafeMutableRawPointer?)
 }
 
 extension UIImage {

@@ -10,7 +10,7 @@ A very simple swift protocol using UIImage method UIImageWriteToSavedPhotosAlbum
  ```swift
 class SinglePhotoVC: UIViewController, PhotoAssetSaveSupported {
     //MARK: PhotoAssetSaveSupported defined function.
-    func photoAssetSaved(image: UIImage?, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer?) {
+    func photoAssetSaved(image: UIImage?, didFinishSavingWithError error: NSError?, contextInfo: UnsafeMutableRawPointer?) {
         if error == nil {
           //Save Image Success!
         } else {
