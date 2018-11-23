@@ -23,6 +23,9 @@ class SinglePhotoVC: UIViewController, PhotoAssetSaveSupported {
         //UIImage`s extension method -> photoAssetSaved:target:context:
         //target is instance satisied PhotoAssetSaveSupported protocol.
         image.photoAssetSaved(target: self, context: nil)
+        
+        //Or use PhotoAssetSaveSupported protocol`s extension function -> save:asset:context, same effect as above.
+        self.save(asset: image, context: nil)
     }
 }
 

@@ -13,6 +13,12 @@ import UIKit
     @objc func photoAssetSaved(image: UIImage?, didFinishSavingWithError error: NSError?, contextInfo: UnsafeMutableRawPointer?)
 }
 
+extension PhotoAssetSaveSupported {
+    public func save(asset: UIImage, context: UnsafeMutableRawPointer?) {
+        UIImageWriteToSavedPhotosAlbum(asset, self, #selector(self.photoAssetSaved(image:didFinishSavingWithError:contextInfo:)), context)
+    }
+}
+
 extension UIImage {
     public func photoAssetSaved(target: PhotoAssetSaveSupported, context: UnsafeMutableRawPointer?) {
         UIImageWriteToSavedPhotosAlbum(self, target, #selector(target.photoAssetSaved(image:didFinishSavingWithError:contextInfo:)), context)
