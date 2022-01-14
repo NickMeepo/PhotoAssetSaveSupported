@@ -30,3 +30,7 @@ class SinglePhotoVC: UIViewController, PhotoAssetSaveSupported {
 }
 
  ```
+
+## Warning: 
+
+You must add "Privacy - Photo Library Additions Usage Description" (NSPhotoLibraryAddUsageDescription) in your info.plist.
